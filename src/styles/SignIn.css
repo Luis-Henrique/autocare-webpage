@@ -1,0 +1,219 @@
+/* SignIn.css */
+
+.sign-in-container {
+  width: 422px;
+  height: 532px;
+  flex-shrink: 0;
+  border-radius: 26px;
+  opacity: var(--sds-size-stroke-border);
+  background: #FFF;
+  box-shadow: 1px 0px 26.1px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sing-in-title {
+  width: 328px;
+  color: var(--Black-colors-Black-100, #000);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.sing-in-google-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-googleg-48dp {
+  width: 18px;
+  position: relative;
+  height: 18px;
+}
+
+.sign-in-with {
+  position: relative;
+  font-weight: 500;
+}
+
+.official-buttons-sign-in-wit {
+  position: relative;
+  border-radius: 100px;
+  background-color: #fff;
+  border: 1px solid #747775;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 12px;
+  gap: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #1f1f1f;
+  font-family: Roboto;
+}
+
+.btn-google-light {
+  all: unset;
+  cursor: pointer;
+}
+
+.sign-in-spam {
+  color: #565656;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.forget-password {
+  cursor: pointer;
+}
+
+.sign-in-input {
+  width: 280px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  opacity: var(--sds-size-stroke-border);
+  background: #F5F7FA;
+  color: #565656;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  border: none;
+  padding-left: 15px;
+  padding-right: 40px;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.sign-in-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #565656;
+}
+
+.password-input {
+  position: relative;
+  margin-top: 9px;
+}
+
+.toggle-password-visibility {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+}
+
+.group-child {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-radius: 12px;
+  background-color: #27272b;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.group-child:hover {
+  background-color: #3c3c42;
+  transform: scale(1.05);
+}
+
+.email-input {
+  margin-top: 25px;
+}
+
+.remember-me {
+  margin-top: 10px;
+  color: #565656;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 0px;
+  padding-top: 15px;
+}
+
+.remember-me-checkbox {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: var(--sds-size-stroke-border) solid #565656;
+  opacity: var(--sds-size-stroke-border);
+  margin-right: 8px;
+}
+
+.sign-in-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.forget-password {
+  padding-top: 15px;
+  width: 312px;
+  position: relative;
+  font-size: 15px;
+  line-height: 120%;
+  font-family: Roboto;
+  color: #1a9afd;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-btn {
+  padding-top: 8px;
+  width: 312px;
+  position: relative;
+  font-size: 15px;
+  line-height: 120%;
+  font-family: Roboto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.register-btn-spam {
+  color: #1a9afd;
+  cursor: pointer;
+  padding-left: 4px;
+}
+
+*:required {
+  border: 1px solid #ff2600;
+}

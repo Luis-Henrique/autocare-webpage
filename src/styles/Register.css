@@ -1,0 +1,29 @@
+.register-container {
+    font-family: 'Arial', sans-serif;
+    background: #F5F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.register-logo-icon {
+    width: 179px;
+    height: 29px;
+}
+
+.register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

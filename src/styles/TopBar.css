@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topbar-container {
+    padding: 20px 50px 20px 50px;
+    background: #F5F5F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}   
+
+.topbar-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.topbar-logo-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 179px;
+    height: 29px;
+}
+
+.topbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.topbar-menu-item {
+    color: #565656;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.topbar-menu-item.active {
+    color: black;
+}
+
+.topbar-login-button {
+    background: #0071E3;
+    border: none;
+    border-radius: 32px;
+    padding: 8px 15px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    width: 105px;
+    height: 34px;
+}
+
+.topbar-button-text {
+    word-wrap: break-word;
+}
+
+.topbar-menu-button,
+.topbar-close-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.topbar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.topbar-profile-button {
+    background: #0071E3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.topbar-profile-button:hover {
+    background: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .topbar-container {
+        padding: 20px 50px 20px 50px;
+    }
+
+    .topbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background: #F5F5F7;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 10;
+    }
+
+    .topbar-menu.open {
+        right: 0;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .topbar-container {
+        padding: 20px 50px 20px 50px;
+        background: #F5F5F7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        /* Adicione esta linha para ajustar o posicionamento dos botões */
+    }
+
+    .topbar-logo {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .topbar-logo-icon {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 179px;
+        height: 29px;
+    }
+
+    .topbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        flex-grow: 1;
+    }
+
+    .topbar-menu-item {
+        color: #565656;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    .topbar-menu-item.active {
+        color: black;
+    }
+
+    .topbar-login-button {
+        background: #0071E3;
+        border: none;
+        border-radius: 32px;
+        padding: 8px 15px;
+        color: white;
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        width: 105px;
+        height: 34px;
+        position: absolute;
+        /* Adicione esta linha */
+        right: 50px;
+        /* Ajuste conforme necessário */
+        top: 50%;
+        /* Ajuste conforme necessário */
+        transform: translateY(-50%);
+        /* Ajuste conforme necessário */
+    }
+
+    .topbar-button-text {
+        word-wrap: break-word;
+    }
+
+    .topbar-menu-button,
+    .topbar-close-button {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .topbar-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+    }
+
+    .topbar-profile-button {
+        background: #0071E3;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        /* Adicione esta linha */
+        right: 50px;
+        /* Ajuste conforme necessário */
+        top: 50%;
+        /* Ajuste conforme necessário */
+        transform: translateY(-50%);
+        /* Ajuste conforme necessário */
+    }
+
+    .topbar-profile-button:hover {
+        background: #005bb5;
+    }
+
+    @media (max-width: 768px) {
+        .topbar-container {
+            padding: 20px 20px;
+            /* Ajuste o padding se necessário */
+        }
+
+        .topbar-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: #F5F5F7;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            transition: right 0.3s ease;
+            z-index: 10;
+        }
+
+        .topbar-menu.open {
+            right: 0;
+        }
+
+        .topbar-menu-button {
+            display: block;
+        }
+
+        .topbar-menu-button-icon {
+            width: 30px;
+        }
+
+        .topbar-close-button {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .topbar-close-button-icon {
+            width: 30px;
+        }
+
+        .topbar-login-button,
+        .topbar-profile-button {
+            position: static;
+            /* Remova a posição fixa em dispositivos móveis */
+            right: auto;
+            /* Remova a posição fixa em dispositivos móveis */
+            top: auto;
+            /* Remova a posição fixa em dispositivos móveis */
+            transform: none;
+            /* Remova a transformação em dispositivos móveis */
+        }
+
+        .topbar-logo-icon {
+            height: 30px;
+        }
+    }
+
+
+    .topbar-menu-button {
+        display: block;
+    }
+
+    .topbar-menu-button-icon {
+        width: 30px;
+    }
+
+    .topbar-close-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .topbar-close-button-icon {
+        width: 30px;
+    }
+
+    .topbar-login-button {
+        margin-left: 0;
+    }
+
+    .topbar-logo-icon {
+        height: 30px;
+    }
+}
