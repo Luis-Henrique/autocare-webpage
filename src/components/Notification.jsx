@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Snackbar, Alert } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faInfoCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Notification = ({ id, type, title, message, removeNotification }) => {
   useEffect(() => {
@@ -12,37 +11,22 @@ const Notification = ({ id, type, title, message, removeNotification }) => {
     return () => clearTimeout(timer);
   }, [id, removeNotification]);
 
-  const renderIcon = (type) => {
-    switch (type) {
-      case 'success':
-        return <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#fff' }} />;
-      case 'info':
-        return <FontAwesomeIcon icon={faInfoCircle} style={{ color: '#fff' }} />;
-      case 'error':
-      default:
-        return <FontAwesomeIcon icon={faExclamationCircle} style={{ color: '#fff' }} />;
-    }
-  };
-
-  let backgroundColor, iconBgColor, titleColor, subtitleColor;
+  let backgroundColor, titleColor, subtitleColor;
 
   switch (type) {
     case 'success':
       backgroundColor = '#EDF7ED';
-      iconBgColor = '#66BB6A';
       titleColor = '#2E7D32';
       subtitleColor = '#4CAF50';
       break;
     case 'info':
       backgroundColor = '#E3F2FD';
-      iconBgColor = '#1976D2';
       titleColor = '#0D47A1';
       subtitleColor = '#64B5F6';
       break;
     case 'error':
     default:
       backgroundColor = '#FDEDED';
-      iconBgColor = '#DB5050';
       titleColor = '#B71C1C';
       subtitleColor = '#565656';
       break;
@@ -64,7 +48,7 @@ const Notification = ({ id, type, title, message, removeNotification }) => {
           display: 'flex',
           alignItems: 'center',
           marginBottom: '8px',
-          width: '364px', 
+          width: '364px',
         }}
       >
         <div>
@@ -74,6 +58,14 @@ const Notification = ({ id, type, title, message, removeNotification }) => {
       </Alert>
     </Snackbar>
   );
+};
+
+Notification.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  type: PropTypes.oneOf(['success', 'info', 'error']).isRequired,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  removeNotification: PropTypes.func.isRequired,
 };
 
 export default Notification;

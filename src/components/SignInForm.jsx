@@ -57,7 +57,7 @@ function SignInForm() {
     urlencodedData.append('username', formData.username);
     urlencodedData.append('password', formData.password);
 
-    api.post('http://localhost:8000/auth/token', urlencodedData, {
+    api.post('/auth/token', urlencodedData, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       }

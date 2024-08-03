@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../utils/Api';
 import '../styles/SignUp.css';
-import Alert from '@mui/material/Alert';
-import GoogleLoginComponent from './GoogleLogin';
 import { useNotification } from '../components/NotificationContext';
 import rigth from '../assets/img/arrow-right.svg';
 import left from '../assets/img/arrow-left.svg';
@@ -13,7 +11,6 @@ import openEye from '../assets/img/open-eye.svg';
 function SignUpForm() {
     const navigate = useNavigate();
     const { addNotification } = useNotification();
-    const [error, setError] = useState(null);
 
     const [formData, setFormData] = useState({
         email: '',
@@ -26,7 +23,6 @@ function SignUpForm() {
     });
 
     const [currentStep, setCurrentStep] = useState(1);
-    const [message, setMessage] = useState('');
     const [isRequired, setIsRequired] = useState({
         email: false,
         username: false,
@@ -188,7 +184,7 @@ function SignUpForm() {
         api.post('/users/', formData)
             .then(response => {
                 console.log('Usuário criado:', response.data);
-                setMessage('Usuário criado com sucesso!');
+                addNotification('success', 'Sucesso', 'Usuário criado com sucesso!');
                 setFormData({
                     email: '',
                     username: '',

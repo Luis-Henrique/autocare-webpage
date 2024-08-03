@@ -72,10 +72,10 @@ const GoogleLoginComponent = () => {
     };
 
     return (
-        <button id="customGoogleButton" class="btn-google-light">
-            <div class="official-buttons-sign-in-wit">
-                <img class="logo-googleg-48dp" alt="Logo da google" src={logoGoogle} />
-                <div class="sign-in-with">Sign in with Google</div>
+        <button id="customGoogleButton" className="btn-google-light">
+            <div className="official-buttons-sign-in-wit">
+                <img className="logo-googleg-48dp" alt="Logo da google" src={logoGoogle} />
+                <div className="sign-in-with">Sign in with Google</div>
             </div>
         </button>
     );
