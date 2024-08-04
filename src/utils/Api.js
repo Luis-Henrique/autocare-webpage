@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://autocare.f6gcbuc7cpg5epcg.eastus.azurecontainer.io:8000';
+const baseURL = 'https://api.autocare.app.br';
 
 const api = axios.create({
   baseURL
